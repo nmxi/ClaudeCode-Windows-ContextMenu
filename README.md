@@ -4,6 +4,8 @@ Windows右クリックメニューにClaude Codeを追加するレジストリ�
 
 Registry files to add Claude Code to Windows Explorer context menu
 
+<img width="871" height="498" alt="image" src="https://github.com/user-attachments/assets/0d24ecd7-95d1-4309-8ae5-64578b48f78d" />
+
 ## 概要
 
 このツールは、Windowsのエクスプローラーの右クリックメニューにClaude Codeを追加し、選択したフォルダで直接Claude Codeを起動できるようにします。
