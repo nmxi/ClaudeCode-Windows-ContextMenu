@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Remove Claude Code menu entries from folder right-click
+[-HKEY_CLASSES_ROOT\Directory\shell\ClaudeCodeMenu]
+
+; Remove Claude Code menu entries from folder background right-click
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\ClaudeCodeMenu]

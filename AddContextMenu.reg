@@ -1,0 +1,70 @@
+Windows Registry Editor Version 5.00
+
+; フォルダ右クリック用のカスケードメニュー
+[HKEY_CLASSES_ROOT\Directory\shell\ClaudeCodeMenu]
+"MUIVerb"="Claude Code"
+"Icon"="C:\\Windows\\System32\\cmd.exe"
+"SubCommands"=""
+
+; サブメニュー項目
+[HKEY_CLASSES_ROOT\Directory\shell\ClaudeCodeMenu\shell\01default]
+"MUIVerb"="New Conversation"
+"Icon"="C:\\Windows\\System32\\cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\ClaudeCodeMenu\shell\01default\command]
+@="cmd.exe /c cd /d \"%V\" && claude"
+
+[HKEY_CLASSES_ROOT\Directory\shell\ClaudeCodeMenu\shell\02continue]
+"MUIVerb"="Continue Recent Conversation"
+"Icon"="C:\\Windows\\System32\\cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\ClaudeCodeMenu\shell\02continue\command]
+@="cmd.exe /c cd /d \"%V\" && claude -c"
+
+[HKEY_CLASSES_ROOT\Directory\shell\ClaudeCodeMenu\shell\03bypass]
+"MUIVerb"="New Conversation (Skip Permissions)"
+"Icon"="C:\\Windows\\System32\\cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\ClaudeCodeMenu\shell\03bypass\command]
+@="cmd.exe /c cd /d \"%V\" && claude --dangerously-skip-permissions"
+
+[HKEY_CLASSES_ROOT\Directory\shell\ClaudeCodeMenu\shell\04continuebypass]
+"MUIVerb"="Continue Recent Conversation (Skip Permissions)"
+"Icon"="C:\\Windows\\System32\\cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\ClaudeCodeMenu\shell\04continuebypass\command]
+@="cmd.exe /c cd /d \"%V\" && claude --dangerously-skip-permissions -c"
+
+; フォルダ内空白部分右クリック用のカスケードメニュー
+[HKEY_CLASSES_ROOT\Directory\Background\shell\ClaudeCodeMenu]
+"MUIVerb"="Claude Code"
+"Icon"="C:\\Windows\\System32\\cmd.exe"
+"SubCommands"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\ClaudeCodeMenu\shell\01default]
+"MUIVerb"="New Conversation"
+"Icon"="C:\\Windows\\System32\\cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\ClaudeCodeMenu\shell\01default\command]
+@="cmd.exe /c claude"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\ClaudeCodeMenu\shell\02continue]
+"MUIVerb"="Continue Recent Conversation"
+"Icon"="C:\\Windows\\System32\\cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\ClaudeCodeMenu\shell\02continue\command]
+@="cmd.exe /c claude -c"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\ClaudeCodeMenu\shell\03bypass]
+"MUIVerb"="New Conversation (Skip Permissions)"
+"Icon"="C:\\Windows\\System32\\cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\ClaudeCodeMenu\shell\03bypass\command]
+@="cmd.exe /c claude --dangerously-skip-permissions"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\ClaudeCodeMenu\shell\04continuebypass]
+"MUIVerb"="Continue Recent Conversation (Skip Permissions)"
+"Icon"="C:\\Windows\\System32\\cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\ClaudeCodeMenu\shell\04continuebypass\command]
+@="cmd.exe /c claude --dangerously-skip-permissions -c"
